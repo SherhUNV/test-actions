@@ -39,6 +39,7 @@
 name: .NET Core Desktop
 
 on:
+  workflow_dispatch: 
   push:
     branches: [ "main" ]
   pull_request:
@@ -52,8 +53,9 @@ jobs:
       matrix:
         configuration: [Debug, Release]
 
-    runs-on: windows-latest  # For a list of available runner types, refer to
+    runs-on: [self-hosted, windows, gui, flaui]  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    timeout-minutes: 30
 
     env:
       Solution_Name: TestForm.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
