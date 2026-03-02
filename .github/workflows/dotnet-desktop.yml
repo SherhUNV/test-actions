@@ -65,4 +65,4 @@ jobs:
       working-directory: ./TestForm/UITest/
 
     - name: echo success
-      run: echo success
+      run: echo suc
