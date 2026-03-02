@@ -45,7 +45,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build_job:
     runs-on: [self-hosted, Windows, X64]  # For a list of available runner types, refer to
 
     steps:
@@ -57,7 +57,7 @@ jobs:
     with:
       dotnet-version: '8.0.x'
 
-    - name: Restote dependencies
+    - name: Restore dependencies
     uses: dotnet Restore
 
     - name: Build project
