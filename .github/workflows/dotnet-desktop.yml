@@ -52,14 +52,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: dir
-      run: echo .\
+    - name: Change project dir
+      run: cd D:\source\repos\GitHubActions\test-actions\TestForm\TestForm
 
     - name: Restore dependencies
       run: dotnet restore
 
     - name: Build project
       run: dotnet build --configuration Debug --no-restore
+
+    - name: Change test dir
+      run: cd D:\source\repos\GitHubActions\test-actions\TestForm\UITest
 
     - name: Run Tests
       run: dotnet test --no-build
