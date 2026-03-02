@@ -52,6 +52,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    -name: dir
+      run: echo .\
+
     - name: Restore dependencies
       run: dotnet restore
 
