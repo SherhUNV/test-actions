@@ -64,4 +64,5 @@ jobs:
       run: dotnet test --no-build
       working-directory: ./TestForm/UITest/
 
-    -name: echo success
+    - name: echo success
+      run: echo success
