@@ -58,6 +58,7 @@ jobs:
 
     - name: Build project
       run: dotnet build --configuration Debug --no-restore
+      working-directory: ./TestForm/TestForm
 
     - name: Run Tests
       run: dotnet test --no-build
