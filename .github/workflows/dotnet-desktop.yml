@@ -52,7 +52,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    -name: dir
+    - name: dir
       run: echo .\
 
     - name: Restore dependencies
