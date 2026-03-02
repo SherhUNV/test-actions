@@ -46,22 +46,22 @@ on:
 
 jobs:
   run_tests:
-    runs-on: [self-hosted, Windows, X64]  # For a list of available runner types, refer to
+    runs-on: [self-hosted, Windows, X64]
 
     steps:
-      - name: Checkout
+    - name: Checkout code
       uses: actions/checkout@v4
-    
-      - name: Setup .NET
+
+    - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
+    - name: Restore dependencies
       run: dotnet restore
 
-      - name: Build project
+    - name: Build project
       run: dotnet build --configuration Debug --no-restore
 
-      - name: Run Tests
+    - name: Run Tests
       run: dotnet test --no-build
