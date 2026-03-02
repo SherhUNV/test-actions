@@ -55,6 +55,9 @@ jobs:
     - name: Change project dir
       run: cd D:\source\repos\GitHubActions\test-actions\TestForm\TestForm
 
+    - name: echo
+      run: echo .\
+
     - name: Restore dependencies
       run: dotnet restore
 
@@ -63,6 +66,9 @@ jobs:
 
     - name: Change test dir
       run: cd D:\source\repos\GitHubActions\test-actions\TestForm\UITest
+
+    - name: echo
+    run: echo .\
 
     - name: Run Tests
       run: dotnet test --no-build
