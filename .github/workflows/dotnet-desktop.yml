@@ -68,7 +68,7 @@ jobs:
       run: cd D:\source\repos\GitHubActions\test-actions\TestForm\UITest
 
     - name: echo
-    run: echo .\
+      run: echo .\
 
     - name: Run Tests
       run: dotnet test --no-build
