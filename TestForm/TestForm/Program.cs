@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace TestForm
 {
     internal static class Program
@@ -10,6 +12,7 @@ namespace TestForm
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             ApplicationConfiguration.Initialize();
             Application.Run(new TestForm());
         }
